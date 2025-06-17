@@ -11,17 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle('active');
     });
     
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Show success message
-        alert('Thank you for your message! We will get back to you soon.');
-        
-        // Reset form
-        this.reset();
-    });
+    // Note: Contact form now uses FormSubmit.co - no JavaScript handling needed
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
