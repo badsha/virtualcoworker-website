@@ -577,8 +577,8 @@
 $(document).ready(function() {
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
-        var form = $(this);
-        var formData = form.serialize();
+        let form = $(this);
+        let formData = form.serialize();
         $.ajax({
             url: 'https://formsubmit.co/ajax/fahadkehan@oxtel1.com',
             method: 'POST',
@@ -587,6 +587,9 @@ $(document).ready(function() {
             success: function(data) {
                 form.trigger('reset');
                 $('#formSuccessMsg').fadeIn();
+                setTimeout(function() {
+                    $('#formSuccessMsg').fadeOut();
+                }, 7000); // Hide after 7 seconds
             },
             error: function(err) {
                 alert('There was an error submitting the form. Please try again.');
