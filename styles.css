@@ -583,6 +583,16 @@ body {
     color: #2563eb;
 }
 
+.price-prefix {
+    color: #888;
+    font-size: 0.7em;
+    filter: blur(0.2px);
+    opacity: 0.8;
+    margin-right: 0.2em;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
 .price-period {
     color: #6b7280;
     margin-bottom: 8px;
@@ -638,7 +648,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 60px 0 120px 0;
+    padding: 60px 0 40px 0;
     background: #fff;
 }
 
@@ -673,9 +683,15 @@ body {
 
 .contact-details-fixed {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: 0;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-details-fixed .contact-item {
+    flex: 1 1 0;
+    min-width: 180px;
 }
 
 .contact-item {
@@ -1064,6 +1080,10 @@ body {
     
     .info-item {
         justify-content: center;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
     }
 }
 
