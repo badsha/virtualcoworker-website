@@ -473,11 +473,10 @@
                 </div>
                 
                 <div class="contact-form-container">
-                    <form class="contact-form" action="https://formsubmit.co/fahadkehan@oxtel1.com" method="POST">
+                    <form class="contact-form" id="contactForm">
                         <!-- FormSubmit.co Configuration -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://www.oxtel.com.au/thank-you.html">
                         <input type="hidden" name="_subject" value="New VirtualCoworker Inquiry">
                         <input type="hidden" name="_cc" value="hamid.badsha@gmail.com">
 
@@ -521,6 +520,7 @@
                         </div>
                         
                         <button type="submit" class="form-submit-btn">Send Message</button>
+                        <div id="formSuccessMsg" style="display:none;color:green;margin-top:1em;">Thank you! Your message has been sent successfully.</div>
                     </form>
                 </div>
             </div>
@@ -572,5 +572,28 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+        var form = $(this);
+        var formData = form.serialize();
+        $.ajax({
+            url: 'https://formsubmit.co/ajax/fahadkehan@oxtel1.com',
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function(data) {
+                form.trigger('reset');
+                $('#formSuccessMsg').fadeIn();
+            },
+            error: function(err) {
+                alert('There was an error submitting the form. Please try again.');
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
