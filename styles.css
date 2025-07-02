@@ -997,6 +997,119 @@ body {
     font-size: 14px;
 }
 
+/* Coming Soon Custom AI Assistant Section */
+.coming-soon-ai {
+    background: linear-gradient(90deg, #4f8cff 0%, #38e8c3 100%);
+    padding: 64px 0;
+    margin: 48px 0;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(79,140,255,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.coming-soon-icon {
+    margin-bottom: 24px;
+}
+
+.coming-soon-icon i {
+    width: 72px;
+    height: 72px;
+    color: #fff;
+    background: rgba(0,0,0,0.10);
+    border-radius: 50%;
+    padding: 18px;
+    box-shadow: 0 4px 16px rgba(56,232,195,0.15);
+    animation: ai-bounce 1.2s infinite alternate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes ai-bounce {
+    0% { transform: translateY(0);}
+    100% { transform: translateY(-18px);}
+}
+
+.coming-soon-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.coming-soon-badge {
+    background: #fff;
+    color: #38e8c3;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 16px;
+    padding: 6px 18px;
+    margin-left: 12px;
+    box-shadow: 0 2px 8px rgba(56,232,195,0.15);
+    animation: badge-pulse 1.5s infinite;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes badge-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(56,232,195,0.4);}
+    70% { box-shadow: 0 0 0 16px rgba(56,232,195,0);}
+    100% { box-shadow: 0 0 0 0 rgba(56,232,195,0);}
+}
+
+.coming-soon-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 0.5em auto;
+    font-weight: 500;
+}
+
+.coming-soon-highlight {
+    background: rgba(0,0,0,0.10);
+    padding: 4px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.coming-soon-secondary {
+    font-size: 1.1em;
+}
+
+.coming-soon-strong {
+    font-size: 1.15em;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(56,232,195,0.15);
+}
+
+/* Responsive for Coming Soon Section */
+@media (max-width: 768px) {
+    .coming-soon-ai {
+        padding: 40px 0;
+        margin: 32px 0;
+        border-radius: 16px;
+    }
+    .coming-soon-content h2 {
+        font-size: 2rem;
+    }
+    .coming-soon-content p {
+        font-size: 1rem;
+    }
+    .coming-soon-icon i {
+        width: 56px;
+        height: 56px;
+        padding: 12px;
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .nav-menu {
